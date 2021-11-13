@@ -1,0 +1,10 @@
+@import "../../sass/mixins";
+
+.leaflet-container {
+  width: 100%;
+  min-height: 70vh;
+
+  @include respond-to("small") {
+    min-height: 80vh;
+  }
+}
