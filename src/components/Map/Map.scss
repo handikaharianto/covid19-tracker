@@ -1,4 +1,4 @@
-@import "../../sass/mixins";
+@import "../../sass/mixins", "../../sass/variables";
 
 .leaflet-container {
   width: 100%;
@@ -6,5 +6,33 @@
 
   @include respond-to("small") {
     min-height: 80vh;
+  }
+}
+
+.leaflet-popup {
+  &-content-wrapper,
+  &-tip {
+    background-color: $clr-gray;
+  }
+}
+
+.country-details {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+
+  &__flag {
+    width: 45px;
+  }
+
+  &__name {
+    font-size: 0.8rem;
+  }
+}
+
+.country-info {
+  span {
+    text-align: right;
   }
 }
