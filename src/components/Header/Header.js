@@ -1,15 +1,13 @@
+import { FaBars } from "react-icons/fa";
 import "./Header.scss";
 
-function Header() {
+function Header({ setIsSidebarActive, handleClick }) {
   return (
     <header>
-      <div className="container">
-        <h1>
-          <a className="logo" href="/">
-            Covid 19 Tracker
-          </a>
-        </h1>
-      </div>
+      <h1>dashboard</h1>
+      <button className="nav-btn" onClick={handleClick}>
+        <FaBars />
+      </button>
     </header>
   );
 }
