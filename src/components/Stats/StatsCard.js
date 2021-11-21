@@ -1,6 +1,6 @@
 import "./StatsCard.scss";
 
-function Stats({ total, updates, statsName, icons }) {
+function StatsCard({ total, updates, statsName, icons }) {
   return (
     <article className="stats-card">
       <div className="stats-card__info">
@@ -14,4 +14,4 @@ function Stats({ total, updates, statsName, icons }) {
   );
 }
 
-export default Stats;
+export default StatsCard;
