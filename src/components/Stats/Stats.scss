@@ -1,0 +1,14 @@
+@import "../../sass/mixins";
+
+.stats {
+  display: grid;
+  margin: 2em 0;
+
+  @include respond-to("small") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to("large") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -4,7 +4,7 @@ import Map from "./components/Map/Map";
 import Header from "./components/Header/Header";
 import useFetch from "./hooks/useFetch";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Stats from "./components/Stats/Stats";
 
 const url = "https://disease.sh/v3/covid-19/countries";
 
@@ -18,12 +18,14 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-        setIsSidebarActive={setIsSidebarActive}
-        handleClick={handleClick}
-      />
-      {/* <Dashboard /> */}
-      {/* <Map data={data} /> */}
+      <main>
+        <Header
+          setIsSidebarActive={setIsSidebarActive}
+          handleClick={handleClick}
+        />
+        <Stats />
+        {/* <Map data={data} /> */}
+      </main>
       <Sidebar
         isSidebarActive={isSidebarActive}
         setIsSidebarActive={setIsSidebarActive}
