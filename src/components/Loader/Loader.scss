@@ -1,0 +1,49 @@
+@import "../../sass/variables";
+
+.spinner {
+  --animation-duration: 1000ms;
+
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .spinner-item {
+    width: calc(75px / 12);
+    height: 80%;
+    background: $clr-dark-gray-2;
+    animation: spinner1 var(--animation-duration) ease-in-out infinite;
+
+    @keyframes spinner1 {
+      50% {
+        transform: scaleY(0.25);
+      }
+    }
+  }
+
+  .spinner-item:nth-child(1) {
+    --clr-spinner: $clr-dark-gray-2;
+    animation-delay: calc(var(--animation-duration) / 10 * -3);
+  }
+
+  .spinner-item:nth-child(2) {
+    --clr-spinner: $clr-dark-gray-2;
+    animation-delay: calc(var(--animation-duration) / 10 * -1);
+  }
+
+  .spinner-item:nth-child(3) {
+    --clr-spinner: $clr-dark-gray-2;
+    animation-delay: calc(var(--animation-duration) / 10 * -2);
+  }
+
+  .spinner-item:nth-child(4) {
+    --clr-spinner: $clr-dark-gray-2;
+    animation-delay: calc(var(--animation-duration) / 10 * -1);
+  }
+
+  .spinner-item:nth-child(5) {
+    --clr-spinner: $clr-dark-gray-2;
+    animation-delay: calc(var(--animation-duration) / 10 * -3);
+  }
+}
