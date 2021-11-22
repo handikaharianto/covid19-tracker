@@ -1,8 +1,10 @@
 @import "../../sass/mixins";
 
 .stats {
+  position: relative;
   display: grid;
-  margin: 2em 0;
+  height: auto;
+  padding: 2em 0;
 
   @include respond-to("small") {
     grid-template-columns: repeat(2, 1fr);
@@ -10,5 +12,19 @@
 
   @include respond-to("large") {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .loader {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .message {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
