@@ -53,7 +53,7 @@ aside {
     border: transparent;
     background-color: transparent;
 
-    @include respond-to("medium") {
+    @include respond-to("large") {
       display: none;
     }
   }
