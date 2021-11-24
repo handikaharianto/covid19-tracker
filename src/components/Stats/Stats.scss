@@ -4,7 +4,6 @@
   position: relative;
   display: grid;
   height: auto;
-  padding: 2em 0;
 
   @include respond-to("small") {
     grid-template-columns: repeat(2, 1fr);
