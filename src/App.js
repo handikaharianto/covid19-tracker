@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import useFetch from "./hooks/useFetch";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Stats from "./components/Stats/Stats";
+import Graph from "./components/Graph/Graph";
 
 const url = "https://disease.sh/v3/covid-19/countries";
 
@@ -24,6 +25,7 @@ function App() {
           handleClick={handleClick}
         />
         <Stats />
+        <Graph />
         {/* <Map data={data} /> */}
       </main>
       <Sidebar
