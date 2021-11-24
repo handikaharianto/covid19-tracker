@@ -65,6 +65,8 @@
     place-items: center;
     border-radius: 10px;
     padding: 0.7em;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+      0 7px 10px -5px rgba(0, 0, 0, 0.4) !important;
 
     svg {
       color: $clr-white-2;
