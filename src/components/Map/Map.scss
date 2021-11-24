@@ -1,13 +1,15 @@
 @import "../../sass/mixins", "../../sass/variables";
 
 .leaflet-container {
-  width: 74vw;
-  min-height: 70vh;
+  width: 95%;
+  min-height: 60vh;
   border-radius: 10px;
-  margin-left: auto;
+  margin: 4em auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
   @include respond-to("small") {
-    min-height: 80vh;
+    min-height: 70vh;
   }
 }
 

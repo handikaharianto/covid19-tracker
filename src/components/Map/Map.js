@@ -1,9 +1,19 @@
+import useFetch from "../../hooks/useFetch";
 import { MapContainer, TileLayer, Popup, CircleMarker } from "react-leaflet";
 import "./Map.scss";
+import formatNumber from "../../utils/formatNumber";
 
-function Map({ data }) {
+const url = "https://disease.sh/v3/covid-19/countries";
+
+function Map() {
+  const { data } = useFetch(url);
+
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={2} scrollWheelZoom={true}>
+    <MapContainer
+      center={[17.058795, 25.645469]}
+      zoom={2}
+      scrollWheelZoom={true}
+    >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -25,7 +35,7 @@ function Map({ data }) {
             color="#e63946"
             stroke={false}
             fillOpacity={0.8}
-            radius={15}
+            radius={17}
           >
             <Popup>
               <div className="country-details">
@@ -37,9 +47,9 @@ function Map({ data }) {
                 <h5 className="country-details__name">{country}</h5>
               </div>
               <ul className="country-info">
-                <li>Total Cases: {cases}</li>
-                <li>Total Recovered: {recovered}</li>
-                <li>Total Deaths: {deaths}</li>
+                <li>Total Cases: {formatNumber(cases)}</li>
+                <li>Total Recovered: {formatNumber(recovered)}</li>
+                <li>Total Deaths: {formatNumber(deaths)}</li>
                 <li>Total New Cases Today: {todayCases}</li>
                 <li>Total Recovered Today: {todayRecovered}</li>
               </ul>
