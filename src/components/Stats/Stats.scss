@@ -1,7 +1,6 @@
 @import "../../sass/mixins";
 
 .stats {
-  position: relative;
   display: grid;
   height: auto;
 
@@ -15,9 +14,9 @@
 
   .loader {
     position: absolute;
-    top: 150%;
+    top: 40%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-40%);
   }
 
   .message {

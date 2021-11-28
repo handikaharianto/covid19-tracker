@@ -6,7 +6,11 @@ import formatNumber from "../../utils/formatNumber";
 const url = "https://disease.sh/v3/covid-19/countries";
 
 function Map() {
-  const { data } = useFetch(url);
+  const { data, loading } = useFetch(url);
+
+  if (loading) {
+    return null;
+  }
 
   return (
     <MapContainer
