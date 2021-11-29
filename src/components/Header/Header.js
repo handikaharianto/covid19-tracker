@@ -1,10 +1,10 @@
 import { FaBars } from "react-icons/fa";
 import "./Header.scss";
 
-function Header({ setIsSidebarActive, handleClick }) {
+function Header({ setIsSidebarActive, handleClick, title }) {
   return (
     <header>
-      <h1>dashboard</h1>
+      <h1>{title}</h1>
       <button className="nav-btn" onClick={handleClick}>
         <FaBars />
       </button>
