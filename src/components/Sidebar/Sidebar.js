@@ -4,7 +4,7 @@ import { MdCoronavirus } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
 import Link from "./Link";
 
-function Sidebar({ isSidebarActive, setIsSidebarActive, handleClick }) {
+function Sidebar({ isSidebarActive, handleClick }) {
   return (
     <aside className={isSidebarActive ? "active" : ""}>
       <div className="sidebar-top">

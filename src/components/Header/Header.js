@@ -1,7 +1,7 @@
 import { FaBars } from "react-icons/fa";
 import "./Header.scss";
 
-function Header({ setIsSidebarActive, handleClick, title }) {
+function Header({ handleClick, title }) {
   return (
     <header>
       <h1>{title}</h1>
