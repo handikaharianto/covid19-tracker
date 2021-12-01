@@ -34,7 +34,15 @@ button {
 main {
   position: relative;
   min-height: 100vh;
+
   @include respond-to("large") {
     margin-left: 17rem;
+  }
+
+  .loader {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-40%);
   }
 }
