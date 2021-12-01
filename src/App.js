@@ -5,7 +5,9 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Stats from "./components/Stats/Stats";
 import Graph from "./components/Graph/Graph";
+import CountryTable from "./components/Table/CountryTable";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import StatesTable from "./components/Table/StatesTable";
 
 function App() {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
@@ -35,6 +37,8 @@ function App() {
               element={
                 <>
                   <Header handleClick={handleClick} title="tables" />
+                  <CountryTable />
+                  <StatesTable />
                 </>
               }
             />
