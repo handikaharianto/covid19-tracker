@@ -32,7 +32,6 @@
 
   &__name {
     color: $clr-gray-2;
-    font-size: 0.85rem;
     font-weight: 200;
     text-align: right;
   }
@@ -52,7 +51,6 @@
   &__update {
     padding: 1em;
     color: $clr-gray-2;
-    font-size: 0.9rem;
     font-weight: 200;
     line-height: 1.5;
   }
@@ -70,7 +68,7 @@
 
     svg {
       color: $clr-white-2;
-      font-size: 1.7rem;
+      font-size: 2.5rem;
     }
   }
 }
